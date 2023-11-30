@@ -6,17 +6,17 @@ import { useState, useRef, useEffect } from 'react';
 import Group from './Group';
 import "./App.css";
 function Navbar(
-  {setSelectedStatus,
-  setSelectedGrouping,
-  selectedGrouping,
-  selectedStatus,
-  groupingOptions,
-  statusOptions,
+  { setSelectedStatus,
+    setSelectedGrouping,
+    selectedGrouping,
+    selectedStatus,
+    groupingOptions,
+    statusOptions,
   }
 ) {
-   const [isDisplayOpen, setIsDisplayOpen] = useState(false);
+  const [isDisplayOpen, setIsDisplayOpen] = useState(false);
 
-  
+
   const displayButtonRef = useRef(null);
   const displayBoxRef = useRef(null);
 

@@ -1,11 +1,11 @@
-import Board from "./Board";
+
 import React, { useEffect } from "react";
 import Constants from "./Constants";
 import { useState } from "react";
 import ApiService from "./ApiService";
-import UserBoard from "./UserBoard";
-import PriorityBoard from "./PriorityBoard";
-import ProgressBoard from "./ProgressBoard";
+import UserBoard from "./Board/UserBoard";
+import PriorityBoard from "./Board/PriorityBoard";
+import ProgressBoard from "./Board/ProgressBoard";
 export default function BoardContainer(props) {
   const [users, setUsers] = useState([]);
   const [tickets, setTickets] = useState([]);
@@ -38,45 +38,34 @@ export default function BoardContainer(props) {
   useEffect(() => {
     fetchInitialData();
   }, []);
+
   if (props.selectedOrdering === 'Title') {
     tickets.sort((a, b) => {
-      const nameA = a.title.toUpperCase(); // ignore upper and lowercase
-      const nameB = b.title.toUpperCase(); // ignore upper and lowercase
+      const nameA = a.title.toUpperCase();
+      const nameB = b.title.toUpperCase();
       if (nameA < nameB) {
         return -1;
       }
       if (nameA > nameB) {
         return 1;
       }
-
-      // names must be equal
       return 0;
     });
-
   }
   else {
-    tickets.sort((a, b) => a.priority - b.priority);
+    tickets.sort((a, b) => b.priority - a.priority);
   }
-  function def(givenData, key) {
-    const result = {};
-    givenData.forEach((currentObject) => {
 
-
-      if (!result[key]) {
-        result[key] = [];
-      }
-
-      result[key].push(currentObject);
-    });
-
-
-    return result;
-  }
   const username = {};
-
+  const userAvailability = {};
   users.forEach(user => {
     username[user.id] = user.name;
+    userAvailability[user.name] = user.available;
+
   });
+  console.log(userAvailability);
+
+
   return (
     <div className="app_boards_container">
       <div className="app_boards">
@@ -89,6 +78,7 @@ export default function BoardContainer(props) {
                 ordering={props.selectedOrdering}
                 cards={filterUserTickets(user.id)}
                 username={username}
+                userAvailability={userAvailability}
               />
             ));
           if (props.selectedGrouping === "Priority")
@@ -100,6 +90,7 @@ export default function BoardContainer(props) {
                   ordering={props.selectedOrdering}
                   cards={filterPriorityTickets(priority)}
                   username={username}
+                  userAvailability={userAvailability}
                 />
               )
             );
@@ -111,6 +102,7 @@ export default function BoardContainer(props) {
                 ordering={props.selectedOrdering}
                 cards={filterProgressCards(progress)}
                 username={username}
+                userAvailability={userAvailability}
               />
             ));
           else return <></>;

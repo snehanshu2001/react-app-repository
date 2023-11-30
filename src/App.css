@@ -69,7 +69,7 @@ button {
 
 .display-box {
   
-  top: 58px; /* Adjust the top position based on your layout */
+  top: 58px; 
   left: 210px;
   transform: translateX(-50%);
   background-color: #f8f8ff;
@@ -89,8 +89,8 @@ button {
   padding: 5px 10px;
   background-color: #fff;
  
-  border: 2px solid rgb(244, 246, 247); /* Set the border to solid black and adjust thickness */
-  border-radius: 5px; /* Adjust the border-radius to control the curvature of the corners */
+  border: 2px solid rgb(244, 246, 247); 
+  border-radius: 5px; 
   cursor: pointer;
 }
 
@@ -99,7 +99,7 @@ button {
   margin-right: 5px;
 }
 .text-with-margin {
-  margin: 0 10px; /* Adjust the margin as needed */
+  margin: 0 10px; 
 }
 .dropdown-container {
   
@@ -115,7 +115,7 @@ button {
 .label {
   margin-right: 0px;
    font-size: 16px
-   /* Adjust the margin as needed */
+   
 }
 
 .select-container {
@@ -123,21 +123,21 @@ button {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
-  /* Align select to the right */
+  
 }
 
 .custom-select {
   font-size: 15px;
-  padding: 4px; /* Adjust padding for better appearance */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 8px; /* Rounded corners */
+  padding: 4px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
 }
 
 .dropdown-icon {
-  color: #888; /* Gray color for the icon */
-  margin-left: -20px; /* Adjust margin to position the icon */
+  color: #888; 
+  margin-left: -20px; 
 }
-/* Add this to your CSS file or style section */
+
 
 .card {
   width: 100%;
@@ -259,7 +259,7 @@ button {
   position: absolute;
   top: 5px;
   right: 10px;
- /* Adjust the margin as needed */
+ 
   
 }
 
@@ -267,10 +267,10 @@ button {
 position: absolute;
   top: 0;
   right: 0;
-  margin-top:20px; /* Adjust the margin as needed */
-  margin-right: 9px; /* Adjust the margin as needed */
-  width: 3px; /* Adjust the width as needed */
-  height: 3px; /* Adjust the height as needed */
+  margin-top:20px; 
+  margin-right: 9px;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
   border: 1px solid #000;
   background-color: green;
@@ -278,26 +278,25 @@ position: absolute;
   align-items: center;
   justify-content: center;
 }
-.id1{
+.card_{
   
-  margin-top: 10px;
- /* Adjust the margin as needed */
+margin-top: 10px;
  gap: 0px;
-  margin-left: 12px; /* Adjust the margin as needed */
+  margin-left: 12px;
   font-size: 9px;
   padding: 0px;
   
   color:#777676;
   
 }
-.id2{
+.card_title{
   
   
- /* Adjust the margin as needed */
+ 
  gap: 0px;
  margin-top: -4px;
   margin-left: 12px; 
-  margin-right: 12px;/* Adjust the margin as needed */
+  margin-right: 12px;
   font-size: 10px;
   padding: 0px;
   margin-bottom: 5px;
@@ -310,7 +309,7 @@ position: absolute;
 
 .icon-tag-container  {
   margin-top: 10px;
-  margin-left: 5px; /* Adjust the margin as needed */
+  margin-left: 5px;
   margin-bottom: 5px;
 }
 span{
@@ -333,9 +332,9 @@ span{
 .dot{
   margin-right: 4px;
   
-   /* Adjust the margin as needed */
-  width: 5px; /* Adjust the width as needed */
-  height: 5px; /* Adjust the height as needed */
+   
+  width: 5px; 
+  height: 5px; 
   border-radius: 50%;
   border: 1px solid #b3b0b0;
   background-color:#b3b0b0;
@@ -344,19 +343,34 @@ span{
   justify-content: center;
 }
 .icon-title-space {
-  margin-right: 5px; /* Adjust the margin as needed */
+  margin-right: 5px;
 }
 .icon{
  
   position: relative;
   margin-top: 4px;
   margin-right:-1px;
-  width: 15px; /* Adjust the width as needed */
-  height: 15px; /* Adjust the height as needed */
+  width: 15px;  
+  height: 15px; 
   border-radius: 50%;
   border: 1px solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(212, 235, 236);
+}
+
+.user-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.online-indicator {
+ width: 8px;
+  height: 8px;
+  background-color: green; 
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right:0;
 }
