@@ -1,0 +1,362 @@
+body {
+  font-family: 'YourChosenFont', sans-serif;
+  overflow: auto;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.app_nav {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.app_boards_container {
+  z-index:1;
+   position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  padding-top: 20px;
+  background-color: #f5fffa;
+}
+
+.app_boards {
+ 
+  height: 100%;
+  width: fit-content;
+  padding: 10px 30px;
+  display: flex;
+  gap: 40px;
+}
+
+
+.app_boards_add-board {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  text-align: center;
+}
+.app_boards_add-board_edit {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.display-button {
+  cursor: pointer;
+}
+
+
+
+button {
+  cursor: pointer;
+}
+
+
+.display-box {
+  
+  top: 58px; /* Adjust the top position based on your layout */
+  left: 210px;
+  transform: translateX(-50%);
+  background-color: #f8f8ff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+ 
+  position: fixed;
+  width: 300px;
+  height: 80px;
+  
+}
+.display-button {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #fff;
+ 
+  border: 2px solid rgb(244, 246, 247); /* Set the border to solid black and adjust thickness */
+  border-radius: 5px; /* Adjust the border-radius to control the curvature of the corners */
+  cursor: pointer;
+}
+
+
+.icon {
+  margin-right: 5px;
+}
+.text-with-margin {
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+.dropdown-container {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:10px
+  
+}
+
+.label {
+  margin-right: 0px;
+   font-size: 16px
+   /* Adjust the margin as needed */
+}
+
+.select-container {
+  
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* Align select to the right */
+}
+
+.custom-select {
+  font-size: 15px;
+  padding: 4px; /* Adjust padding for better appearance */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.dropdown-icon {
+  color: #888; /* Gray color for the icon */
+  margin-left: -20px; /* Adjust margin to position the icon */
+}
+/* Add this to your CSS file or style section */
+
+.card {
+  width: 100%;
+  min-height: 80px;
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: white;
+ 
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+
+.board {
+ 
+  min-width: 250px;
+  max-height: 100%;
+  flex-basis: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.board_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.board_header_title {
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.board_header_title span {
+  color: rgb(145, 145, 145);
+}
+
+.board_header_title_more {
+  cursor: pointer;
+  position: relative;
+}
+
+.board_dropdown {
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  width: 150px !important;
+  cursor: default;
+}
+.board_dropdown p {
+  border-bottom: 1px solid #f8f8f8;
+  cursor: pointer;
+}
+
+.board_cards {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.board_add-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  text-align: center;
+}
+.board_add-card_edit {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.profile_image {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+ /* Adjust the margin as needed */
+  
+}
+
+.indicator{
+position: absolute;
+  top: 0;
+  right: 0;
+  margin-top:20px; /* Adjust the margin as needed */
+  margin-right: 9px; /* Adjust the margin as needed */
+  width: 3px; /* Adjust the width as needed */
+  height: 3px; /* Adjust the height as needed */
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.id1{
+  
+  margin-top: 10px;
+ /* Adjust the margin as needed */
+ gap: 0px;
+  margin-left: 12px; /* Adjust the margin as needed */
+  font-size: 9px;
+  padding: 0px;
+  
+  color:#777676;
+  
+}
+.id2{
+  
+  
+ /* Adjust the margin as needed */
+ gap: 0px;
+ margin-top: -4px;
+  margin-left: 12px; 
+  margin-right: 12px;/* Adjust the margin as needed */
+  font-size: 10px;
+  padding: 0px;
+  margin-bottom: 5px;
+  
+}
+.icon-tag-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-tag-container  {
+  margin-top: 10px;
+  margin-left: 5px; /* Adjust the margin as needed */
+  margin-bottom: 5px;
+}
+span{
+  font-size:10px;
+}
+.number-of-task{
+  font-size: 15px;
+
+}
+.tag{
+  
+  margin-left: 8px;
+  border: 0.5px solid #f5f5f5;
+  border-radius: 3px;
+  
+  padding: 5px;
+  display: flex;
+  
+}
+.dot{
+  margin-right: 4px;
+  
+   /* Adjust the margin as needed */
+  width: 5px; /* Adjust the width as needed */
+  height: 5px; /* Adjust the height as needed */
+  border-radius: 50%;
+  border: 1px solid #b3b0b0;
+  background-color:#b3b0b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-title-space {
+  margin-right: 5px; /* Adjust the margin as needed */
+}
+.icon{
+ 
+  position: relative;
+  margin-top: 4px;
+  margin-right:-1px;
+  width: 15px; /* Adjust the width as needed */
+  height: 15px; /* Adjust the height as needed */
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(212, 235, 236);
+}
